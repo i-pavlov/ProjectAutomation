@@ -31,9 +31,8 @@ public enum Tuist {
 
         do {
             let graphPath = temporaryDirectory.appendingPathComponent("graph.json")
-            let tuistBinaryPath = ProcessInfo.processInfo.environment["TUIST_CONFIG_BINARY_PATH"] ?? "tuist"
             var arguments = [
-                tuistBinaryPath,
+                "tuist",
                 "graph",
                 "--format", "json",
                 "--output-path", temporaryDirectory.path,
